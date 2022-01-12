@@ -1,0 +1,31 @@
+###
+GET http://localhost:7000/api/compras HTTP/1.1
+
+###
+POST http://localhost:7000/api/guardar-compra HTTP/1.1
+Content-Type: application/json
+
+{
+    "CI": 1012,
+    "COD_PRODUCTO": 100,
+    "CANTIDAD": 10   
+}
+
+###
+GET http://localhost:7000/api/compra/1 HTTP/1.1
+
+###
+GET http://localhost:7000/api/compras/sara HTTP/1.1
+
+###
+DELETE  http://localhost:7000/api/eliminar-compra/97 HTTP/1.1
+
+
+###
+# PUT http://localhost:7000/api/editar-compra/7 HTTP/1.1
+# Content-Type: application/json
+
+# {
+#     "COD_PRODUCTO": 101,
+#     "CANTIDAD": 7   
+# }

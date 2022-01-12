@@ -1,0 +1,14 @@
+if (save.affectedRows) {
+'UPDATE PRODUCTO SET STOCK = STOCK - ? WHERE COD_PRODUCTO = ?',[params.CANTIDAD, params.COD_PRODUCTO],
+(err: string, result: any) => {
+if (err)
+res.status(500).send({ message: 'No se ha actualizado el stock' });
+
+      res.status(200).send({ result, message: 'Stock actualizado' });
+    };
+
+}
+
+--> Terminar el metodo saveCompra y poder hacer update al stock
+--> Analizar y diseñar la logica del procedimiento segun las unidades de medida del producto
+--> Analizar y diseñar la logica de las ventas con cuentas por cobrar
